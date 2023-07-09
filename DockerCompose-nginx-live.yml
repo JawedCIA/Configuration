@@ -31,7 +31,7 @@ services:
     expose:
       - "24297"
     environment:
-      - WebAPIBaseAddressForJS=https://api.arkthor.local/api/
+      - WebAPIBaseAddressForJS=https://api.arkthor.com/api/
     networks:
       - nwarkthor
   
