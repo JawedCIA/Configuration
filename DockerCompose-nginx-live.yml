@@ -8,7 +8,11 @@ services:
       - 443:443
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
-      - /etc/letsencrypt/live:/etc/nginx/ssl
+      - /etc/letsencrypt/live/arkthor.com:/etc/nginx/ssl/arkthor.com
+      - /etc/letsencrypt/live/api.arkthor.com:/etc/nginx/ssl/api.arkthor.com
+      - /etc/letsencrypt/archive/arkthor.com:/etc/nginx/ssl/archive/arkthor.com
+      - /etc/letsencrypt/archive/api.arkthor.com:/etc/nginx/ssl/archive/api.arkthor.com
+
     depends_on:
       - arkthorui
       - arkthorapi
