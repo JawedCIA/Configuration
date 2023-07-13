@@ -21,7 +21,7 @@ services:
             max-file: "3"
 
   arkthorui:
-    image: arkthor/arkthor-ui:latest
+    image: arkthor/arkthor-ui:livehosting
     container_name: arkthorui
     restart: "always"
     depends_on:
@@ -29,12 +29,12 @@ services:
     expose:
       - "24297"
     environment:
-      - WebAPIBaseAddressForJS=https://api.arkthor.local/api/
+      - WebAPIBaseAddressForJS=http://api.arkthor.com/api/
     networks:
       - nwarkthor
   
   arkthorapi:
-    image: arkthor/arkthor-api:latest
+    image: arkthor/arkthor-api:livehosting
     container_name: arkthorapi
     restart: "always"
     depends_on:
